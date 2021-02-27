@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Interview.Core\Interview.Core.csproj" />
-    <ProjectReference Include="..\Interview.Infrastructure\Interview.Infrastructure.csproj" />
+    <ProjectReference Include="..\Interview.Infrastructure\Interview.Recruiter.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

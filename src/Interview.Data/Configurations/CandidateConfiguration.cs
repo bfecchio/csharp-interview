@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Interview.Recruiter.Data.Context;
+using Interview.Recruiter.Domain.AggregateModel.CandidateAggregate;
 
-using Interview.Data.Context;
-using Interview.Domain.AggregateModel.CandidateAggregate;
-
-namespace Interview.Data.Configurations
+namespace Interview.Recruiter.Data.Configurations
 {
     internal sealed class CandidateConfiguration : IEntityTypeConfiguration<Candidate>
     {

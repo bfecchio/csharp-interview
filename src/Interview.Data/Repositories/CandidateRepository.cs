@@ -1,10 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using Interview.Recruiter.Data.Context;
+using Interview.Recruiter.Domain.AggregateModel.CandidateAggregate;
+using Interview.Recruiter.Domain.Repositories;
 
-using Interview.Data.Context;
-using Interview.Domain.Repositories;
-using Interview.Domain.AggregateModel.CandidateAggregate;
-
-namespace Interview.Data.Repositories
+namespace Interview.Recruiter.Data.Repositories
 {
     public sealed class CandidateRepository : Repository<Candidate>, ICandidateRepository
     {

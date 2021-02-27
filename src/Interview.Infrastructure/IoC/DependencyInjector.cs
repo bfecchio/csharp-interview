@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
 using Interview.Core.Domain;
-using Interview.Data.Context;
-using Interview.Domain.Services;
-using Interview.Domain.Interfaces;
-using Interview.Domain.Repositories;
-using Interview.Data.Repositories;
+using Interview.Recruiter.Data.Context;
+using Interview.Recruiter.Domain.Services;
+using Interview.Recruiter.Data.Repositories;
+using Interview.Recruiter.Domain.Interfaces;
+using Interview.Recruiter.Domain.Repositories;
 
-namespace Interview.Infrastructure.IoC
+namespace Interview.Recruiter.Infrastructure.IoC
 {
     public static class DependencyInjector
     {

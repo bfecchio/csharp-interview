@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Interview.Core\Interview.Core.csproj" />
-    <ProjectReference Include="..\Interview.Data\Interview.Data.csproj" />
-    <ProjectReference Include="..\Interview.Domain\Interview.Domain.csproj" />
+    <ProjectReference Include="..\Interview.Data\Interview.Recruiter.Data.csproj" />
+    <ProjectReference Include="..\Interview.Domain\Interview.Recruiter.Domain.csproj" />
   </ItemGroup>
 
 </Project>

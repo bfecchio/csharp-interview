@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Query;
 
 using Interview.Core.Data;
 using Interview.Core.Domain;
-using Interview.Data.Context;
+using Interview.Recruiter.Data.Context;
 
-namespace Interview.Data.Repositories
+namespace Interview.Recruiter.Data.Repositories
 {
     public abstract class Repository<TAggregateRoot> : IReadRepository<TAggregateRoot>, IWriteRepository<TAggregateRoot>
         where TAggregateRoot : class, IAggregateRoot

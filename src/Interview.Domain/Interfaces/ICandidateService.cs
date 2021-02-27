@@ -1,6 +1,6 @@
 ﻿using Interview.Core.Domain;
 
-namespace Interview.Domain.Interfaces
+namespace Interview.Recruiter.Domain.Interfaces
 {
     public interface ICandidateService : IDomainService
     {

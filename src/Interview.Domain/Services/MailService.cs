@@ -1,13 +1,16 @@
-using Interview.Domain.Interfaces;
+using Interview.Recruiter.Domain.Interfaces;
 
-namespace Interview.Domain.Services
+namespace Interview.Recruiter.Domain.Services
 {
-    public class MailService : IMailService
+    public sealed class MailService : IMailService
     {
+        #region IMailService Members
+
         public void Send(string to, string from, string body)
         {
             throw new System.NotImplementedException();
         }
 
+        #endregion
     }
 }

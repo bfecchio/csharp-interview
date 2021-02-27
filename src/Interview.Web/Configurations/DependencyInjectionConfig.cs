@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
 using Interview.Core.Domain;
-using CandidateServices = Interview.Infrastructure.IoC;
+using RecruiterServices = Interview.Recruiter.Infrastructure.IoC;
 
 namespace Interview.Web.Configurations
 {
@@ -13,7 +13,7 @@ namespace Interview.Web.Configurations
         {
             Guard.AssertArgumentNotNull(services, "The services is required.");
 
-            CandidateServices.DependencyInjector.RegisterAll(services);
+            RecruiterServices.DependencyInjector.RegisterAll(services);
         }
 
         #endregion

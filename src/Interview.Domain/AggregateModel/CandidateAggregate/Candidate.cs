@@ -1,7 +1,7 @@
 ﻿using Interview.Core.Domain;
 using System.Collections.Generic;
 
-namespace Interview.Domain.AggregateModel.CandidateAggregate
+namespace Interview.Recruiter.Domain.AggregateModel.CandidateAggregate
 {
     public sealed class Candidate : Entity, IAggregateRoot
     {
@@ -13,7 +13,7 @@ namespace Interview.Domain.AggregateModel.CandidateAggregate
         #endregion
 
         #region Constructors
-        
+
         public Candidate(string name, string surname)
         {
             Guard.AssertArgumentNotEmpty(name, "The name is required.");

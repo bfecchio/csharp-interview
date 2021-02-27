@@ -1,14 +1,16 @@
-using Interview.Domain.Interfaces;
+using Interview.Recruiter.Domain.Interfaces;
 
-namespace Interview.Domain.Services
+namespace Interview.Recruiter.Domain.Services
 {
-    public class SmsService : ISmsService
+    public sealed class SmsService : ISmsService
     {
-
+        #region ISmsService Members
 
         public void Send(string phone, string message)
         {
             throw new System.NotImplementedException();
         }
+
+        #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Interview.Core.Data;
-using Interview.Domain.AggregateModel.CandidateAggregate;
+using Interview.Recruiter.Domain.AggregateModel.CandidateAggregate;
 
-namespace Interview.Domain.Repositories
+namespace Interview.Recruiter.Domain.Repositories
 {
     public interface ICandidateRepository : IReadRepository<Candidate>
     {

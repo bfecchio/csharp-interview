@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 using Interview.Core.Data;
 
-namespace Interview.Data.Context
+namespace Interview.Recruiter.Data.Context
 {
     public class ApplicationDbContext : IdentityDbContext, IUnitOfWork
     {

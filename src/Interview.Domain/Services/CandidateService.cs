@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Logging;
 
 using Interview.Core.Domain;
-using Interview.Domain.Interfaces;
-using Interview.Domain.Repositories;
+using Interview.Recruiter.Domain.Interfaces;
+using Interview.Recruiter.Domain.Repositories;
 
-namespace Interview.Domain.Services
+namespace Interview.Recruiter.Domain.Services
 {
     public sealed class CandidateService : DomainService, ICandidateService
     {
@@ -18,7 +18,7 @@ namespace Interview.Domain.Services
         #region Constructors
 
         public CandidateService(ILogger<CandidateService> logger
-            , ICandidateRepository candidateRepository    
+            , ICandidateRepository candidateRepository
         )
             : base(logger)
         {

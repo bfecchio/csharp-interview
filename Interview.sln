@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Web", "src\Interv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Core", "src\Interview.Core\Interview.Core.csproj", "{9320BEF6-0C9D-4319-9774-02CC15A0A0D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Domain", "src\Interview.Domain\Interview.Recruiter.Domain.csproj", "{3837C4BC-D960-4F68-9FF3-8AA1E75D98CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Domain", "src\Interview.Recruiter.Domain\Interview.Recruiter.Domain.csproj", "{3837C4BC-D960-4F68-9FF3-8AA1E75D98CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Data", "src\Interview.Data\Interview.Recruiter.Data.csproj", "{5F6152CB-3D8E-4D79-A4A4-81E34FFEEF31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Data", "src\Interview.Recruiter.Data\Interview.Recruiter.Data.csproj", "{5F6152CB-3D8E-4D79-A4A4-81E34FFEEF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Infrastructure", "src\Interview.Infrastructure\Interview.Recruiter.Infrastructure.csproj", "{5F10AA1E-A388-4F98-A5D1-171801A58454}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Recruiter.Infrastructure", "src\Interview.Recruiter.Infrastructure\Interview.Recruiter.Infrastructure.csproj", "{5F10AA1E-A388-4F98-A5D1-171801A58454}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{36EC4313-114F-44B2-AE62-B6E21A2566F8}"
 EndProject

@@ -12,7 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Interview.Core\Interview.Core.csproj" />
-      <ProjectReference Include="..\Interview.Domain\Interview.Recruiter.Domain.csproj" />
+      <ProjectReference Include="..\Interview.Recruiter.Domain\Interview.Recruiter.Domain.csproj" />
     </ItemGroup>
 
 </Project>

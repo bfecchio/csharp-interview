@@ -3,6 +3,7 @@ using AutoMapper;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 using Interview.Web.Models;
 using Interview.Web.Extensions;
@@ -11,6 +12,7 @@ using Interview.Recruiter.Domain.Interfaces;
 
 namespace Interview.Controllers
 {
+    [Authorize()]
     [Route("test")]
     public sealed class TestController : AbstractController
     {

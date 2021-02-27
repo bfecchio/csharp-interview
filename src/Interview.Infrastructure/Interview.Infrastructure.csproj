@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Interview.Core\Interview.Core.csproj" />
+    <ProjectReference Include="..\Interview.Data\Interview.Data.csproj" />
+    <ProjectReference Include="..\Interview.Domain\Interview.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

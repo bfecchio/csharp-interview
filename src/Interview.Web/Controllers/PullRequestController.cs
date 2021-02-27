@@ -1,39 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Interview.Web.Controllers;
 using Microsoft.Extensions.Logging;
-using Interview.Models;
-using Interview.Recruiter.Domain.Services;
+
+using Interview.Web.Models;
+using Interview.Recruiter.Domain.Interfaces;
 
 namespace Interview.Controllers
 {
-    public class PullRequestController : Controller
+    [Route("pull-request")]
+    public class PullRequestController : AbstractController
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly MailService mailService;
-        private readonly SmsService SmsService;
+        #region Read-Only Fields
 
-        public PullRequestController(ILogger<HomeController> logger, MailService MailService)
+        private readonly ISmsService _smsService;
+        private readonly IMailService _mailService;
+
+        #endregion
+
+        #region Constructors
+
+        public PullRequestController(ILogger<HomeController> logger, IMapper mapper
+            , ISmsService smsService
+            , IMailService mailService
+        )
+            : base(logger, mapper)
         {
-            _logger = logger;
-            mailService = MailService;
-            SmsService = new SmsService();
-
+            _smsService = smsService ?? throw new ArgumentNullException(nameof(smsService));
+            _mailService = mailService ?? throw new ArgumentNullException(nameof(mailService));
         }
 
+        #endregion
+
+        #region Actions
 
         public IActionResult Index()
         {
-            mailService.Send("test@test.com", "test@test.com", "body");
-            SmsService.Send("111111", "message");
-
-            //You have return a view with 2 textox and a button
-            return View();
+            try
+            {
+                _smsService.Send("111111", "message");
+                _mailService.Send("test@test.com", "test@test.com", "body");            
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+            
+            return View(new PullRequestViewModel());
         }
 
-
+        #endregion
     }
 }

@@ -1,0 +1,24 @@
+﻿@model Interview.Web.Models.PullRequestViewModel
+@{
+    ViewData["Title"] = "Pull Request";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h3>Pull request details</h3>
+        <div asp-validation-summary="All"></div>
+        <form method="post">            
+            <div class="form-group">
+                <label asp-for="@Model.Field1"></label>
+                <input asp-for="@Model.Field1" class="form-control" />
+                <span asp-validation-for="@Model.Field1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Field2"></label>
+                <input asp-for="@Model.Field2" class="form-control" />
+                <span asp-validation-for="@Model.Field2" class="text-danger"></span>
+            </div>
+            <button asp-controller="Test" asp-action="Register" class="btn btn-primary float-right">Submit</button>
+        </form>
+    </div>
+</div>

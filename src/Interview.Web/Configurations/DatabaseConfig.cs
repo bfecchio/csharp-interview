@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using Interview.Data;
 using Interview.Core.Domain;
+using Interview.Recruiter.Data.Context;
 
 namespace Interview.Web.Configurations
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Interview.Data.Migrations
+namespace Interview.Recruiter.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

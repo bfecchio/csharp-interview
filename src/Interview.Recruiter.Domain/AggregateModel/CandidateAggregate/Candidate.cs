@@ -33,5 +33,21 @@ namespace Interview.Recruiter.Domain.AggregateModel.CandidateAggregate
         }
 
         #endregion
+
+        #region Methods
+
+        public void SetName(string name)
+        {
+            Guard.AssertArgumentNotEmpty(name, "The name is required.");
+            Name = name;
+        }
+
+        public void SetSurname(string surname)
+        {
+            Guard.AssertArgumentNotEmpty(surname, "The surname is required.");
+            Surname = surname;
+        }
+
+        #endregion
     }
 }

@@ -11,6 +11,7 @@ namespace Interview.Core.Data
 
         Task Add(TAggregateRoot aggregateRoot);
         Task Update(TAggregateRoot aggregateRoot);
+        Task Delete(TAggregateRoot aggregateRoot);
 
         #endregion
     }

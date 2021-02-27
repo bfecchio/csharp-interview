@@ -1,10 +1,58 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Interview.Web.Models.CandidateViewModel
+@{
+    ViewData["Title"] = "Candidate management";
 }
 
-<div class="text-center">
-Add here a form with 2 textbox and a button , 
-You must save the content on the BBDD.
-This controller have to require login.
-
+<div class="row">
+    <div class="col-6">
+        <h3>Candidate's personal details</h3>
+        <div asp-validation-summary="All"></div>
+        <form method="post">
+            <input type="hidden" asp-for="@Model.CandidateId" />
+            <div class="form-group">
+                <label asp-for="@Model.Name"></label>
+                <input asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Surname"></label>
+                <input asp-for="@Model.Surname" class="form-control" />
+                <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+            </div>
+            @if (Model.CandidateId != Guid.Empty)
+            {
+                <button asp-controller="Test" asp-action="Delete" asp-route-id="@Model.CandidateId" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+            }
+            <button asp-controller="Test" asp-action="Register" class="btn btn-primary float-right">Submit</button>
+        </form>
+    </div>
+</div>
+<br class="clearfix"/>
+<div class="row">
+    <div class="col-12">
+        <h3>Registered candidates</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var candidate in Model.Candidates)
+                    {
+                        <tr>
+                            <td>@candidate.Name</td>
+                            <td>@candidate.Surname</td>
+                            <td>                                
+                                <a asp-action="Edit" asp-route-id="@candidate.CandidateId" class="btn btn-sm btn-warning">Edit</a>                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

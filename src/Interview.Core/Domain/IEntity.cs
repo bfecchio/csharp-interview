@@ -2,7 +2,7 @@
 
 namespace Interview.Core.Domain
 {
-    public interface IEntity
+    public interface IEntity : IDomainEntity
     {
         #region IEntity Members
 

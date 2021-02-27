@@ -33,6 +33,7 @@ namespace Interview
                 .AddDatabaseConfiguration(Configuration)
                 .AddIdentityConfiguration()
                 .AddMvcConfiguration()
+                .AddAutoMapperConfiguration()
                 .AddDependencyInjectionConfiguration();
         }
         

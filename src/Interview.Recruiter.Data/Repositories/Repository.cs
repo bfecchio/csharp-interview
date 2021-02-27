@@ -129,6 +129,12 @@ namespace Interview.Recruiter.Data.Repositories
             return Task.CompletedTask;
         }
 
+        public virtual Task Delete(TAggregateRoot aggregateRoot)
+        {
+            DbSet.Remove(aggregateRoot);
+            return Task.CompletedTask;
+        }
+
         #endregion
     }
 }
